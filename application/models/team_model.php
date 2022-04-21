@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class team_model extends CI_Model {
+class Team_model extends CI_Model {
 
 	public function __construct()
 	{
@@ -13,6 +13,38 @@ class team_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('team');
+		$this->db->order_by('status','DESC');
+		$this->db->order_by('tahun','ASC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	public function load_inti()
+	{
+		$this->db->select('*');
+		$this->db->from('team');
+		$this->db->where('status', 'inti');
+		$this->db->order_by('tahun','ASC');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	public function load_jabatan()
+	{
+		$this->db->select('jabatan');
+		$this->db->from('team');
+		$this->db->where('status', 'anggota');
+		$this->db->distinct();
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	public function load_anggota()
+	{
+		$this->db->select('*');
+		$this->db->from('team');
+		$this->db->where('status', 'anggota');
+		$this->db->order_by('tahun','ASC');
 		$query = $this->db->get();
 		return $query->result();
 	}

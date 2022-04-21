@@ -75,10 +75,10 @@ class Team extends CI_Controller {
 					$data = array(	'nama'				=> $i->post('nama'),
 									'jabatan'			=> $i->post('jabatan'),
 									'fb'				=> $i->post('facebook'),
-									'wa'				=> $i->post('whatsapp'),
+									'status'			=> $i->post('status'),
 									'ig'				=> $i->post('instagram'),
 									'keahlian'			=> $i->post('keahlian'),
-									'deskripsi'			=> $i->post('deskripsi'),
+									'tahun'				=> $i->post('tahun'),
 									'foto'				=> $upload_data['uploads']['file_name'],
 								);
 					$this->team_model->tambah($data);
@@ -145,11 +145,11 @@ class Team extends CI_Controller {
 					$data = array(	'id_team'			=> $team->id_team,
 									'nama'				=> $i->post('nama'),
 									'fb'				=> $i->post('facebook'),
-									'wa'				=> $i->post('whatsapp'),
+									'status'			=> $i->post('status'),
 									'ig'				=> $i->post('instagram'),
 									'keahlian'			=> $i->post('keahlian'),
 									'jabatan'			=> $i->post('jabatan'),
-									'deskripsi'			=> $i->post('deskripsi'),
+									'tahun'				=> $i->post('tahun'),
 									'foto'				=> $upload_data['uploads']['file_name'],
 								);
 					$this->team_model->edit($data);
@@ -161,11 +161,11 @@ class Team extends CI_Controller {
 				$data = array(	'id_team'			=> $team->id_team,
 								'nama'				=> $i->post('nama'),
 								'fb'				=> $i->post('facebook'),
-								'wa'				=> $i->post('whatsapp'),
+								'status'			=> $i->post('status'),
 								'ig'				=> $i->post('instagram'),
 								'keahlian'			=> $i->post('keahlian'),
 								'jabatan'			=> $i->post('jabatan'),
-								'deskripsi'				=> $i->post('deskripsi')
+								'tahun'				=> $i->post('tahun')
 							);
 				$this->team_model->edit($data);
 				$this->session->set_flashdata('sukses', 'Data '.$team->nama.' telah diupdate');
@@ -202,7 +202,7 @@ class Team extends CI_Controller {
 
 		// Check id_project kosong atau tidak
 		if($id_team == "") {
-			$this->session->set_flashdata('warning', 'Anda belum memilih data');
+			$this->session->set_flashdata('statusrning', 'Anda belum memilih data');
 			redirect(base_url('admin/team'),'refresh');
 		}
 

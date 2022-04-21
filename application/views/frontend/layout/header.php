@@ -14,7 +14,7 @@
   <meta content="<?php echo $site->keywords; ?>" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo base_url('assets/img/'.$site->icon) ?> " rel="icon">
+  <link href="<?php echo base_url('assets/img/'.$site->icon) ?> " rel="shortcut icon">
   <link href="<?php echo base_url('assets/img/'.$site->icon) ?>" rel="apple-touch-icon">
 
   <!-- Google Fonts -->

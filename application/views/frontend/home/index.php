@@ -44,11 +44,9 @@
 
           <?php foreach ($slider as $slider): ?>
             
-            <div class="row">
               <!-- <div class="testimonial"> -->
-                <img src="<?php echo base_url('assets/img/document/'.$slider->gambar) ?>" alt="Image" class="img-fluid" style="max-height: 450px">
+                <img src="<?php echo base_url('assets/img/document/'.$slider->gambar) ?>" alt="Image" class="img-fluid loopgambar">
               <!-- </div> -->
-            </div>
 
           <?php endforeach ?>
 
@@ -58,3 +56,13 @@
     </section><!-- End Testimonials Section -->
 
   </main><!-- End #main -->
+
+  <style>
+    .loopgambar{
+        max-height: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+  </style>

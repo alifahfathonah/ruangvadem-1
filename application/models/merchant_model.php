@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class merchant_model extends CI_Model {
+class Merchant_model extends CI_Model {
 
 	public function __construct()
 	{

@@ -38,7 +38,7 @@ function reset_klik() {
 
 <?php 
 $last_num = $this->merchant_model->get_last_num_image($id_merchandise);
-if ($last_num < 1) {
+if ($last_num == null) {
   $last_num = 0;
 }else{
   $last_num = $last_num->urutan;

@@ -8,7 +8,7 @@
       </div>
 
       <div class="form-group">
-        <label>Jabatan</label>
+        <label>Devisi</label>
         <input type="text" name="jabatan" class="form-control" placeholder="Jabatan" value="<?php echo set_value('jabatan') ?>">
       </div>
 
@@ -26,10 +26,12 @@
         <input type="text" name="facebook" class="form-control" placeholder="http://facebook.com/namakamu" value="<?php echo set_value('facebook') ?>">
       </div>
 
-      <div class="form-group">
-        <label>Nomor Whatsapp</label>
-        <input type="text" name="whatsapp" class="form-control" placeholder="Nomor Whatsapp" value="<?php echo set_value('whatsapp') ?>">
+      <br>
+      <div class="form-group btn-group">
+        <button type="submit" name="submit" class="btn btn-success btn-md"><i class="fa fa-save"></i> Simpan Data</button>
+        <button type="reset" name="reset" class="btn btn-info btn-md"><i class="fa fa-cut"></i> Reset</button>
       </div>
+      
     </div>
 
     <div class="col-md-6">
@@ -40,20 +42,23 @@
       </div>
 
       <div class="form-group">
-        <label>Deskripsi Singkat</label>
-        <textarea rows="5" name="deskripsi" class="form-control"><?php echo set_value('deskripsi') ?></textarea>
+        <label>Tahun</label>
+        <input type="number" name="tahun" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Status</label>
+        <select class="form-control" name="status">
+          <option value="anggota">Anggota</option>
+          <option value="inti">Inti</option>
+        </select>
       </div>
 
       <div class="form-group">
         <label>Instagram</label>
         <input type="text" name="instagram" class="form-control" placeholder="http://instagram.com/namakamu" value="<?php echo set_value('instagram') ?>">
       </div>
-
-      <br>
-      <div class="form-group btn-group">
-        <button type="submit" name="submit" class="btn btn-success btn-md"><i class="fa fa-save"></i> Simpan Data</button>
-        <button type="reset" name="reset" class="btn btn-info btn-md"><i class="fa fa-cut"></i> Reset</button>
-      </div>
+      
     </div>
   </div>
       

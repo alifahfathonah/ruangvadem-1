@@ -11,10 +11,14 @@ class Team extends CI_Controller {
 
 	public function index()
 	{
-		$team 	= $this->team_model->load();
+		$team_inti    = $this->team_model->load_inti();
+		$jabatan	  = $this->team_model->load_jabatan();
+		$team_anggota = $this->team_model->load_anggota();
 
 		$data = array(	'title'				=> 'TEAM VADEM',
-						'team'				=> $team,
+						'team_inti'			=> $team_inti,
+						'team_jabatan'		=> $jabatan,
+						'team_anggota'		=> $team_anggota,
 						'isi'				=> 'frontend/team/index',
 						'name'				=> 'team'
 			);

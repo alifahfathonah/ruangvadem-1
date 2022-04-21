@@ -24,9 +24,10 @@ echo form_open(base_url('admin/team/proses'));
         </th>
         <th style="vertical-align: middle;" class="text-center" width="20%">FOTO</th>
         <th style="vertical-align: middle;" class="text-center" width="20%">NAMA</th>
-        <th style="vertical-align: middle;" class="text-center" width="15%">JABATAN</th>
+        <th style="vertical-align: middle;" class="text-center" width="15%">DEVISI</th>
         <th style="vertical-align: middle;" class="text-center" width="15%">KEAHLIAN</th>
-        <th style="vertical-align: middle;" class="text-center" width="30%">DESKRIPSI</th>
+        <th style="vertical-align: middle;" class="text-center" width="15%">TAHUN</th>
+        <th style="vertical-align: middle;" class="text-center" width="15%">STATUS</th>
         <th style="vertical-align: middle;" class="text-center" width="15%">ACTIONS</th>
     </tr>
 </thead>
@@ -46,10 +47,11 @@ echo form_open(base_url('admin/team/proses'));
       <img src="<?php echo base_url('assets/img/team/'.$team->foto) ?>" class="img img-thumbnail img-responsive" width="60">
     </td>
     <td><?php echo $team->nama ?><br>
-    <td><?php echo $team->jabatan ?></td>
-    <td><?php echo $team->keahlian ?></td>
-    <td><?php echo $team->deskripsi ?></td>
-    <td>
+    <td class="text-center"><?php echo $team->jabatan ?></td>
+    <td class="text-center"><?php echo $team->keahlian ?></td>
+    <td class="text-center"><?php echo $team->tahun ?></td>
+    <td class="text-center"><?php echo $team->status ?></td>
+    <td class="text-center">
       <div class="btn-group">
         <a href="<?php echo base_url('admin/team/edit/'.$team->id_team) ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
         <a href="<?php echo base_url('admin/team/delete/'.$team->id_team) ?>" class="btn btn-danger btn-sm" onclick="confirmation(event)"><i class="fa fa-trash-o"></i> Hapus</a>
